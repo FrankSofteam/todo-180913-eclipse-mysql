@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Paramètres de connexion à la BD  -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://lhcp1011.webapps.net:3306/cl1lff8g_m2i?serverTimezone=Europe/Paris</property>
+		<property name="connection.username">cl1lff8g_m2i</property>
+		<property name="connection.password">m2i_formation</property>
+
+		<!-- Nombre de threads à utiliser -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- Dialecte SQL à utiliser  -->
+		<!-- Permet de dire à Hibernate comment convertir les types Java en types SQL -->
+		<!-- Lui permet aussi de convertir du HQL en SQL correctement -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+	<!-- 	<property name="hibernate.hbm2ddl.auto">create</property> -->
+
+		<!-- Afficher toutes les requêtes exécutées dans la console -->
+		<property name="show_sql">true</property>
+
+		<mapping class="model.Todo" />
+
+
+		
+			
+
+	</session-factory>
+	
+
+</hibernate-configuration>
