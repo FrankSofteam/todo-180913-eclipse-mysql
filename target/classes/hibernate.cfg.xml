@@ -19,7 +19,7 @@
 		<!-- Permet de dire à Hibernate comment convertir les types Java en types SQL -->
 		<!-- Lui permet aussi de convertir du HQL en SQL correctement -->
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-	<!-- 	<property name="hibernate.hbm2ddl.auto">create</property> -->
+	<!--   <property name="hibernate.hbm2ddl.auto">update</property> -->
 
 		<!-- Afficher toutes les requêtes exécutées dans la console -->
 		<property name="show_sql">true</property>
