@@ -41,6 +41,7 @@ public class CORSFILTER implements Filter {
 		// pass the request along the filter chain
 		((HttpServletResponse)response).setHeader("Access-Control-Allow-Origin", "*");
 		((HttpServletResponse)response).setHeader("Access-Control-Allow-Headers", "*");
+		((HttpServletResponse)response).setHeader("Access-Control-Allow-Methods", "PUT, DELETE, POST, GET, OPTIONS");
 		chain.doFilter(request, response);
 	}
 

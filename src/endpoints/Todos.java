@@ -43,9 +43,9 @@ public class Todos {
 	}
 	
 	@DELETE
-	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/{id_todo}")
 	public Response delete(@PathParam("id_todo") Integer identifiant) {
+		System.out.println("Route appelée");
 		TodoDAO.delete(identifiant);
 		return Response.ok().build();
 	}
